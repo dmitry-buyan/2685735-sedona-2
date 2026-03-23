@@ -13,9 +13,14 @@
   src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
+html {
+  height: 100%;
+}
 
 body {
+  margin: 0;
   padding: 0 40px;
+  height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -24,10 +29,43 @@ body {
 }
 
 .page-wrapper {
+  display: flex;
+  flex-direction: column;
   width: 1200px;
+  min-height: 100%;
   margin: 0 auto;
   background-color: #FFFFFF;
   box-shadow: 0 0 15px 0 #00000033;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 70px;
+}
+
+.logo {
+  width: 140px;
+  height: 70px;
+  margin-right: 28px;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.main-nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 40px;
+}
+
+.main-nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .main-nav-link {
@@ -36,6 +74,14 @@ body {
   font-weight: 700;
   color: #000000;
   text-decoration: none;
+}
+
+.nav-menu {
+  max-width: 600px;
+}
+
+.user-menu {
+  max-width: 300px;
 }
 
 .favorites-count {
@@ -73,6 +119,11 @@ body {
   text-align: center;
 }
 
+.advantages-intro-container {
+  width: 660px;
+  margin: 0 auto;
+}
+
 .advantages h2 {
   font-size: 30px;
   line-height: 36px;
@@ -92,7 +143,16 @@ body {
   line-height: 26px;
 }
 
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .advantages-item {
+  width: 400px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -101,6 +161,8 @@ body {
 }
 
 .advantages-item.advantages-item-accent {
+  width: 100%;
+  flex-grow: 1;
   color: #FFFFFF;
   background-color: #82B3D3;
 }
@@ -111,6 +173,11 @@ body {
 
 .services {
   text-align: center;
+}
+
+.services-intro-container {
+  width: 510px;
+  margin: 0 auto;
 }
 
 .services h2 {
@@ -125,6 +192,18 @@ body {
   line-height: 26px;
 }
 
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.services-item {
+  width: 400px;
+}
+
 .services-item:nth-child(odd) {
   background-color: rgba(131, 179, 211, 0.12);
 }
@@ -137,6 +216,8 @@ body {
 }
 
 .hotel-search {
+  width: 600px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -167,6 +248,11 @@ body {
   background-position: center center;
 }
 
+.newsletter-intro-container {
+  width: 475px;
+  margin: 0 auto;
+}
+
 .newsletter h2 {
   font-size: 30px;
   line-height: 36px;
@@ -195,6 +281,19 @@ body {
   background-color: #F2F2F2;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70px;
+}
+
+.footer-social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .footer-phone {
   font-size: 40px;
   line-height: 48px;
@@ -203,6 +302,7 @@ body {
 }
 
 .catalog-header {
+  padding: 0 70px;
   color: #FFFFFF;
   background-color: #82B3D3;
   background-image: url("../images/filter_background.jpg");
@@ -216,10 +316,21 @@ body {
   line-height: 78px;
 }
 
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .breadcrumbs-link {
   font-size: 16px;
   color: inherit;
   text-decoration: none;
+}
+
+.catalog-filter {
+  display: flex;
+  justify-content: space-between;
 }
 
 .filter-title {
@@ -255,6 +366,10 @@ body {
   background-color: transparent;
 }
 
+.catalog {
+  padding: 0 70px;
+}
+
 .catalog-result {
   font-size: 30px;
   line-height: 36px;
@@ -263,12 +378,23 @@ body {
   color: #000000;
 }
 
+.catalog-sorting-panel {
+  display: flex;
+  align-items: center;
+}
+
 .catalog-sort {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
   color: inherit;
   background-color: #FFFFFF;
+}
+
+.hotel-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .hotel-link {
@@ -296,6 +422,13 @@ body {
   background-color: #F2F2F2;
 }
 
+.pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .pagination-link {
   font-size: 20px;
   line-height: 36px;
@@ -310,15 +443,12 @@ body {
   background-color: #F2F2F2;
 }
 
-.catalog-footer .newsletter {
+.catalog-newsletter {
+  color: #333333;
   background-color: transparent;
   background-image: none;
 }
 
-.catalog-footer h2 {
+.catalog-newsletter h2 {
   color: #000000;
-}
-
-.catalog-footer .newsletter-description {
-  color: #333333;
 }

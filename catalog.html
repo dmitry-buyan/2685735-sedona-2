@@ -42,7 +42,7 @@
         </nav>
       </header>
 
-      <main data-test="main">
+      <main class="main-container" data-test="main">
         <section class="catalog-header" data-test="filter">
           <h1 class="catalog-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
@@ -133,7 +133,7 @@
 
         <section class="catalog" data-test="catalog">
           <h2 class="visually-hidden">Список гостиниц</h2>
-          <div class="catalog-sorting">
+          <div class="catalog-sorting-panel">
             <p class="catalog-result">
               Найдено гостиниц: <span>38</span>
             </p>
@@ -256,20 +256,22 @@
             </li>
           </ul>
         </section>
-      </main>
-
-      <footer class="catalog-footer" data-test="footer">
-        <section class="newsletter" data-test="subscribe">
-          <h2>Подпишитесь на рассылку</h2>
-          <p class="newsletter-description">
-            Только полезная информация и никакого спама, честное бойскаутское!
-          </p>
+        <section class="newsletter catalog-newsletter" data-test="subscribe">
+          <div class="newsletter-intro-container">
+            <h2>Подпишитесь на рассылку</h2>
+            <p class="newsletter-description">
+              Только полезная информация и никакого спама, честное бойскаутское!
+            </p>
+          </div>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="newsletter-email">Ваш e-mail</label>
             <input type="email" name="email" id="newsletter-email" placeholder="Ваш e-mail" required>
             <button class="newsletter-button button" type="submit">Подписаться</button>
           </form>
         </section>
+      </main>
+
+      <footer class="footer" data-test="footer">
         <ul class="footer-social-list">
           <li class="footer-social-item">
             <a class="footer-social-link footer-social-link-vk" href="https://vk.com/htmlacademy">
